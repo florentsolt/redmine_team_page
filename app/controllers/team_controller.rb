@@ -4,7 +4,7 @@ class TeamController < ApplicationController
   	group = Setting.plugin_redmine_team_page['group'].to_i
   	group = Group.find(group) rescue nil
   	if group.nil?
-  		@users = User.all
+  		@users = User.all - [User.anonymous]
   	else
   		@users = User.in_group(group)
   	end
