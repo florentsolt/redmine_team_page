@@ -1,0 +1,6 @@
+body.controller-team .team h2 .gravatar {
+    float: right;
+    display: block;
+    width: 40px;
+    height: 40px;
+}

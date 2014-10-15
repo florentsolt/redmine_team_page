@@ -1,0 +1,12 @@
+<p>
+	<label for="settings_group">Group</label>
+	<select id="settings_group" name="settings[group]">
+		<option value="0" class="all">All users</option>
+	<% Group.all.each do |group| %>
+		<option value="<%= group.id %>" <%= group.id == settings['group'].to_i ? 'selected' : ''%>>Group: <%= group.name %></option>
+	<% end %>
+</p>
+<p>
+	<label for="settings_wiki">Wiki content</label>
+	<textarea rows="20" id="settings_wiki" name="settings[wiki]"><%= settings['wiki'] %></textarea>
+</p>
