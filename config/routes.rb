@@ -1,3 +1,3 @@
 RedmineApp::Application.routes.draw do
-  match '/team', :to => 'team#index'
+  get '/team', :to => 'team#index'
 end
